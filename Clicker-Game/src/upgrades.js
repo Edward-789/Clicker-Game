@@ -1,4 +1,4 @@
-let increments = [10];
+let increments = [10, 12, 25];
 
 class mainButton {
     constructor(increment) {
