@@ -1,0 +1,59 @@
+img.upgradeImage  {
+    border : 2px solid  black;
+    height : 128px;
+    width : auto;
+}
+
+img#mainButton {
+    height : 128px;
+    width : auto;
+    transition: all 0.05s ease-in-out;
+}
+
+img#mainButton:hover {
+    transform: scale(1.15);
+}
+
+img#mainButton:active { 
+    transform: scale(1.05);
+}
+
+
+.upgrade {
+    display : flex;
+    justify-content: left;
+    align-items: top;
+    border : 2px solid black;
+    height : 130px;
+    width : auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+
+}
+
+.button {
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width : auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.button:hover {
+    transform: rotate(4deg);
+}
+
+.button:active { 
+    transform: rotate(2deg) scale(0.9);
+}
+
+span {
+    font-size: large;
+}

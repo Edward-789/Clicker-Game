@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clicker Game</title>
+        <link href="src/style.css" rel = "stylesheet">
+    </head>
+    <body>
+        <h1>bakery</h1>
+        <img src = "src/resources/cookie.png" alt = "Cookiepng" id = "mainButton" />
+        <p>
+            Cookies :
+            <span id = "numCookies">
+                0
+            </span>
+        </p>
+
+        <div class = "upgrade">
+            <img src = "src/resources/miner.png" alt = "Minerpng" class = "upgradeImage">
+
+            <div class = "grid-container">
+                <div>
+                    <span>A miner that mines cookies.</span> 
+                </div>
+                
+                <div class = "button" id = "minerButton">
+                    Buy Miner!
+                </div>
+
+                <div>
+                    <span> Amount :
+                        <span id = "amountMiners"> 0 </span>
+                    </span>
+                    <span> Cost :
+                        <span id = "costMiners">45</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script src = "src/upgrades.js"></script>
+<script src="src/events.js"></script>
