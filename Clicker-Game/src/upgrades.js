@@ -1,5 +1,4 @@
 let increments = [10];
-let numOfUpgrades = [0];
 
 class mainButton {
     constructor(increment) {
@@ -20,9 +19,7 @@ class autoUpgrade {
 
             costObject.innerText = (costObject.innerText * 1) + increments[typeOfUpgrade];
 
-            numOfUpgrades[typeOfUpgrade]++;
-
-            if (numOfUpgrades[typeOfUpgrade] % 8 == 0) {
+            if (amountObject.innerText % 8 == 0) {
                 increments[typeOfUpgrade] = Math.round(increments[typeOfUpgrade] * 1.1)
             }
 
