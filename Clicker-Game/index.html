@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>bakery</h1>
-        <img src = "src/resources/cookie.png" alt = "Cookiepng" id = "mainButton" />
+        <img src = "src/resources/cookie.png" alt = "Cookiepng" id = "mainButton" /> 
         <p>
             Cookies :
             <span id = "numCookies">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class = "upgrade">
-                <img src = "src/resources/sauropod.png" alt = "Sauropodpng" class = "upgradeImage">
+                <img src = "src/resources/Sauropod.png" alt = "Sauropodpng" class = "upgradeImage">
 
                 <div class = "grid-container">
                     <div>
@@ -81,8 +81,18 @@
                 </div>
             </div>
         </div>
+        <br>
+        <div class = "saveWrapper">
+            <div class = "saveButton" onclick="downloadSave()">Download Save</div>
+            <div class = "saveButton" onclick="loadSave()">Load Save</div>
+        </div>
+        <br>
+        <textarea id = "saveText" placeholder="Paste save data into here"></textarea>
+
+
     </body>
 </html>
 
 <script src = "src/upgrades.js"></script>
 <script src="src/events.js"></script>
+<script src = "src/saving.js"></script>
