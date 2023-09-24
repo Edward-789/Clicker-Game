@@ -27,7 +27,3 @@ treeButton.addEventListener("click", function() {
 sauropodButton.addEventListener("click", function() {
     autoUpgrade(1, 250, costSauropods, amountSauropods, 2);
 });
-
-sauropodButton.addEventListener("click", function() {
-  let i = new autoUpgrade(1, 333, costSauropods, amountSauropods, 2);
-});
