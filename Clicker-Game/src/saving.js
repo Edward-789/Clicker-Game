@@ -10,7 +10,8 @@ function findSave () {
     out += '"amountTrees" : ' + amountTrees.innerText + ',' 
     out += '"costTrees" : ' + costTrees.innerText + ',' 
     out += '"amountSauropods" : ' + amountSauropods.innerText + ',' 
-    out += '"costSauropods" : ' + costSauropods.innerText
+    out += '"costSauropods" : ' + costSauropods.innerText + ','
+    out += '"pointsPerSec" : ' + pointsPerSec
     out += "}"
     return out; 
 }
@@ -36,6 +37,10 @@ function loadSave() {
     costTrees.innerText = saveDatas.costTrees;
     amountSauropods.innerText = saveDatas.amountSauropods;
     costSauropods.innerText = saveDatas.costSauropods;
-    increments = saveDatas.increments[i];
+    increments = saveDatas.increments;
+    
+    setInterval(function() {
+        cookieNum.innerText = (cookieNum.innerText * 1) + 1;
+    }, 1000 / saveDatas.pointsPerSec )
     
 }
