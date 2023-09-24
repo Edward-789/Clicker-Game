@@ -33,7 +33,7 @@ img#mainButton:active {
     grid-template-columns: auto;
 }
 
-.three-columns {
+.two-columns {
     grid-template-columns: auto auto !important;
 }
 
