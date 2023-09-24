@@ -11,19 +11,21 @@ const amountTrees = document.querySelector("#amountTrees");
 const costSauropods = document.querySelector("#costSauropods");
 const amountSauropods = document.querySelector("#amountSauropods");
 
-let mainButtons = new mainButton(1);
 
 clickerButton.addEventListener("click", function() {
-  mainButtons.upClicks;
-  console.log(findSave());
-});
+    upClicks()
+})
 
 minerButton.addEventListener("click", function() {
-  let i = new autoUpgrade(1, 5000, costMiners, amountMiners, 0);
+    autoUpgrade(1, 5000, costMiners, amountMiners, 0);
 });
-
+  
 treeButton.addEventListener("click", function() {
-  let i = new autoUpgrade(1, 2000, costTrees, amountTrees, 1);
+    autoUpgrade(1, 2000, costTrees, amountTrees, 1);
+});
+  
+sauropodButton.addEventListener("click", function() {
+    autoUpgrade(1, 250, costSauropods, amountSauropods, 2);
 });
 
 sauropodButton.addEventListener("click", function() {
