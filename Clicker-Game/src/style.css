@@ -7,7 +7,7 @@ img.upgradeImage  {
 img#mainButton {
     height : 128px;
     width : auto;
-    transition: all 0.05s ease-in-out;
+    transition: all 100ms ease-in-out;
 }
 
 img#mainButton:hover {
@@ -31,15 +31,19 @@ img#mainButton:active {
 .grid-container {
     display: grid;
     grid-template-columns: auto;
+}
 
+.three-columns {
+    grid-template-columns: auto auto !important;
 }
 
 .button {
+    background-color: #0c8501;
     display : flex;
     align-items: center;
     justify-content: center;
     height: 40px;
-    width : auto;
+    width : 80px;
     border: 2px solid black;
     border-radius: 8px;
     margin: 10px;
@@ -47,6 +51,7 @@ img#mainButton:active {
 }
 
 .button:hover {
+    background-color: #15ff00;
     transform: rotate(4deg);
 }
 
