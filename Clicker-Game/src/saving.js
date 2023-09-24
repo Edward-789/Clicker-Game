@@ -36,9 +36,6 @@ function loadSave() {
     costTrees.innerText = saveDatas.costTrees;
     amountSauropods.innerText = saveDatas.amountSauropods;
     costSauropods.innerText = saveDatas.costSauropods;
-
-    for (let i = 0; i <= saveDatas.increments.length; i++) {
-        increments[i] = saveDatas.increments[i];
-    }
+    increments = saveDatas.increments[i];
     
 }
