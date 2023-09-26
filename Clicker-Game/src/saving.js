@@ -4,7 +4,7 @@ const saveData = document.querySelector("#saveText");
 function findSave () {
     let out = "{ ";
     out += '"numCookies" : ' + cookieNum.innerText + ','
-    out += '"increments" : "[' + increments + ']",'
+    out += '"increments" : [' + increments + '],'
     out += '"amountMiners" : ' + amountMiners.innerText + ',' 
     out += '"costMiners" : ' + costMiners.innerText + ',' 
     out += '"amountTrees" : ' + amountTrees.innerText + ',' 
@@ -39,7 +39,7 @@ function loadSave() {
         amountSauropods.innerText = saveDatas.amountSauropods;
         costSauropods.innerText = saveDatas.costSauropods;
         increments = saveDatas.increments;
-        
+
         setInterval(function() {
             cookieNum.innerText = (cookieNum.innerText * 1) + 1;
         }, 1000 / saveDatas.pointsPerSec )
