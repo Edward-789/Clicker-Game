@@ -38,6 +38,7 @@ function loadSave() {
         costTrees.innerText = saveDatas.costTrees;
         amountSauropods.innerText = saveDatas.amountSauropods;
         costSauropods.innerText = saveDatas.costSauropods;
+        pointsPerSec = saveDatas.pointsPerSec;
         increments = saveDatas.increments;
 
         setInterval(function() {
