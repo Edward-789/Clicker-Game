@@ -19,7 +19,7 @@ function findSave () {
 function downloadSave() {
     const blob = new Blob([findSave()], {type:"octad-stream"})
     const href = URL.createObjectURL(blob)
-    const a = Object.assign0(document.createElement('a'), {href, 
+    const a = Object.assign(document.createElement('a'), {href, 
         style:"display:none", 
         download:"clickerSave.txt"});
     document.body.appendChild(a);
