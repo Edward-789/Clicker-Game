@@ -31,18 +31,23 @@ function downloadSave() {
 function loadSave() {
     if (cookieNum.innerText == 0) {
         const saveDatas = JSON.parse(saveData.value);
-        cookieNum.innerText = saveDatas.numCookies;
-        amountMiners.innerText = saveDatas.amountMiners;
-        costMiners.innerText = saveDatas.costMiners;
-        amountTrees.innerText = saveDatas.amountTrees;
-        costTrees.innerText = saveDatas.costTrees;
-        amountSauropods.innerText = saveDatas.amountSauropods;
-        costSauropods.innerText = saveDatas.costSauropods;
-        pointsPerSec = saveDatas.pointsPerSec;
-        increments = saveDatas.increments;
+        cookieNum.innerText = saveDataExists(saveDatas.numCookies);
+        amountMiners.innerText = saveDataExists(saveDatas.amountMiners);
+        costMiners.innerText = saveDataExists(saveDatas.costMiners, costMiners.innerText * 1);
+        amountTrees.innerText = saveDataExists(saveDatas.amountTrees);
+        costTrees.innerText = saveDataExists(saveDatas.costTrees, costTrees.innerText * 1);
+        amountSauropods.innerText = saveDataExists(saveDatas.amountSauropods);
+        costSauropods.innerText = saveDataExists(saveDatas.costSauropods, costSauropods.innerText * 1);
+        increments = saveDataExists(saveDatas.increments, [10, 12, 25]);
 
         setInterval(function() {
             cookieNum.innerText = (cookieNum.innerText * 1) + 1;
         }, 1000 / saveDatas.pointsPerSec )
     }
+}
+
+function saveDataExists(saveData, defaultValue = 0) {
+    if (saveData == undefined) return defaultValue;
+
+    return saveData;
 }
