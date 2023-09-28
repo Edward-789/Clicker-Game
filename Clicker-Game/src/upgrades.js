@@ -6,7 +6,7 @@ function upClicks() {
 }
 
 function autoUpgrade(increment, interval, costObject, amountObject, typeOfUpgrade) {
-    if (costObject.innerText * 1 < cookieNum.innerText * 1) {
+    if (costObject.innerText * 1 <= cookieNum.innerText * 1) {
         amountObject.innerText = (amountObject.innerText * 1) + 1;
 
         cookieNum.innerText = (cookieNum.innerText * 1) - (costObject.innerText * 1);
