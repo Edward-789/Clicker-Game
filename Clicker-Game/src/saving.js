@@ -9,7 +9,7 @@ function findSave () {
     out += '"costMiners" : ' + costMiners.innerText + ',' 
     out += '"amountTrees" : ' + amountTrees.innerText + ',' 
     out += '"costTrees" : ' + costTrees.innerText + ',' 
-    out += '"amountSauropods" : ' + amountSauropods.innerText + ',' 
+    out += '"amountSauropods" : '+ amountSauropods.innerText + ',' 
     out += '"costSauropods" : ' + costSauropods.innerText + ','
     out += '"pointsPerSec" : ' + pointsPerSec
     out += "}"
@@ -31,14 +31,14 @@ function downloadSave() {
 function loadSave() {
     if (cookieNum.innerText == 0) {
         const saveDatas = JSON.parse(saveData.value);
-        cookieNum.innerText = saveDataExists(saveDatas.numCookies);
-        amountMiners.innerText = saveDataExists(saveDatas.amountMiners);
-        costMiners.innerText = saveDataExists(saveDatas.costMiners, costMiners.innerText * 1);
-        amountTrees.innerText = saveDataExists(saveDatas.amountTrees);
-        costTrees.innerText = saveDataExists(saveDatas.costTrees, costTrees.innerText * 1);
-        amountSauropods.innerText = saveDataExists(saveDatas.amountSauropods);
-        costSauropods.innerText = saveDataExists(saveDatas.costSauropods, costSauropods.innerText * 1);
-        increments = saveDataExists(saveDatas.increments, [10, 12, 25]);
+        cookieNum.innerText = saveData.numCookies || 0;
+        amountMiners.innerText = saveDatas.amountMiners || 0
+        costMiners.innerText = saveDatas.costMiners || costMiners.innerText * 1 
+        amountTrees.innerText = saveDatas.amountTrees || 0
+        costTrees.innerText = saveDatas.costTrees || costTrees.innerText * 1
+        amountSauropods.innerText = saveDatas.amountSauropods || 0
+        costSauropods.innerText = saveDatas.costSauropods || costSauropods.innerText * 1 
+        increments = saveDatas.increments || 0
 
         setInterval(function() {
             cookieNum.innerText = (cookieNum.innerText * 1) + 1;
@@ -46,8 +46,3 @@ function loadSave() {
     }
 }
 
-function saveDataExists(saveData, defaultValue = 0) {
-    if (saveData == undefined) return defaultValue;
-
-    return saveData;
-}
