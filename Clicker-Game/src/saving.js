@@ -31,7 +31,7 @@ function downloadSave() {
 function loadSave() {
     if (cookieNum.innerText == 0) {
         const saveDatas = JSON.parse(saveData.value);
-        cookieNum.innerText = saveData.numCookies || 0;
+        cookieNum.innerText = saveDatas.numCookies || 0;
         amountMiners.innerText = saveDatas.amountMiners || 0
         costMiners.innerText = saveDatas.costMiners || costMiners.innerText * 1 
         amountTrees.innerText = saveDatas.amountTrees || 0
@@ -43,6 +43,8 @@ function loadSave() {
         setInterval(function() {
             cookieNum.innerText = (cookieNum.innerText * 1) + 1;
         }, 1000 / saveDatas.pointsPerSec )
+    } else {
+        alert("Saves can only be loaded on new games")
     }
 }
 
